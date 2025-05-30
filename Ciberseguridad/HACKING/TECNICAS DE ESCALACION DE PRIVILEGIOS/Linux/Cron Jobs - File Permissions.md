@@ -7,7 +7,7 @@
 cat /etc/crontab
 ```
 
-![[Pasted image 20240323000137.png]]
+![[Apuntes/Imagenes/Pasted image 20240323000137.png]]
 - Debería haber dos trabajos cron programados para ejecutarse cada minuto. Uno ejecuta overwrite.sh, el otro ejecuta /usr/local/bin/compress.sh.
 
 - Localice la ruta completa del archivo overwrite.sh:
@@ -36,6 +36,6 @@ nc -nvlp 4444
 ```
 
 Enlace:
-[[Preparacion-Ejpt]]
-[[Cron Jobs - Wildcards]]
-[[Cron Jobs - PATH Environment Variable]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Cron Jobs - Wildcards]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Cron Jobs - PATH Environment Variable]]

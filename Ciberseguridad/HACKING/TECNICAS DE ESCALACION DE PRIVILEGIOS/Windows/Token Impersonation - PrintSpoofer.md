@@ -13,7 +13,7 @@ C:\PrivEsc\PrintSpoofer.exe -c "C:\PrivEsc\reverse.exe" -i
 ```
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Herramientas]]
-[[Token Impersonation - Rogue Potato]]
-[[Generate a Reverse Shell Executable]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Herramientas]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Token Impersonation - Rogue Potato]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Generate a Reverse Shell Executable]]

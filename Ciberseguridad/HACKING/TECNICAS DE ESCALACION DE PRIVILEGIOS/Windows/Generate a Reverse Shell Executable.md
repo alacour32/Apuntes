@@ -32,5 +32,5 @@ C:\PrivEsc\reverse.exe`
 ```
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Herramientas]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Herramientas]]

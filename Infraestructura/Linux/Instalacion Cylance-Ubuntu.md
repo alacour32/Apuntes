@@ -42,4 +42,4 @@ AWS=0
 ```
 
 Enlace:
-[[Actualizacion Kernel-Ubuntu]]
+[[Apuntes/Infraestructura/Linux/Actualizacion Kernel-Ubuntu]]

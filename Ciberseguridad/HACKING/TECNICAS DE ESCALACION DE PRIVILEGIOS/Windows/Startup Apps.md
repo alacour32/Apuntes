@@ -20,6 +20,6 @@ rdesktop -u admin 10.10.94.6
 - Un shell que se ejecuta como administrador debe conectarse nuevamente a su oyente.
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Herramientas]]
-[[Generate a Reverse Shell Executable]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Herramientas]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Generate a Reverse Shell Executable]]

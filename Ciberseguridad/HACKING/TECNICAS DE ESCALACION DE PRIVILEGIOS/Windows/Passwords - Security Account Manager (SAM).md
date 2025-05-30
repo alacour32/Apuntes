@@ -24,10 +24,10 @@ hashcat -m 1000 --force <hash> /usr/share/wordlists/rockyou.txt
 Puede usar la contraseña descifrada para iniciar sesión como administrador usando winexe o PDR.
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Herramientas]]
-[[Passwords - Passing the Hash]]
-[[Passwords - Registry]]
-[[Passwords - Saved Creds]]
-[[Generate a Reverse Shell Executable]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Herramientas]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Passwords - Passing the Hash]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Passwords - Registry]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Passwords - Saved Creds]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Generate a Reverse Shell Executable]]
 

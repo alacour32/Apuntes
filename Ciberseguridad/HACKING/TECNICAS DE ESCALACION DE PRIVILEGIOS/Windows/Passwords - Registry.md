@@ -20,11 +20,11 @@ winexe -U 'admin%password' //10.10.226.103 cmd.exe
 
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Herramientas]]
-[[Passwords - Passing the Hash]]
-[[Passwords - Saved Creds]]
-[[Passwords - Security Account Manager (SAM)]]
-[[Generate a Reverse Shell Executable]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Herramientas]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Passwords - Passing the Hash]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Passwords - Saved Creds]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Passwords - Security Account Manager (SAM)]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Generate a Reverse Shell Executable]]
 
 

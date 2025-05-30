@@ -20,6 +20,6 @@ echo C:\PrivEsc\reverse.exe >> C:\DevTools\CleanUp.ps1
 - Espere a que se ejecute la Tarea Programada, que debería activar el shell inverso como SYSTEM.
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Herramientas]]
-[[Generate a Reverse Shell Executable]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Herramientas]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Generate a Reverse Shell Executable]]

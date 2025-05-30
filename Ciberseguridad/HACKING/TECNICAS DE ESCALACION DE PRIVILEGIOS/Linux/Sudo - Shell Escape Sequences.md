@@ -8,5 +8,5 @@
 - Elija un programa de la lista e intente obtener un shell raíz, siguiendo las instrucciones de GTFOBins.
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Sudo - Environment Variables (variable de entorno)]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Sudo - Environment Variables (variable de entorno)]]

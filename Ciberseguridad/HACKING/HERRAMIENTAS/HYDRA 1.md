@@ -36,4 +36,4 @@ El comando que proporcionaste está utilizando Hydra, una herramienta de fuerza 
 
 
 enlace:
-[[Preparacion-Ejpt]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]

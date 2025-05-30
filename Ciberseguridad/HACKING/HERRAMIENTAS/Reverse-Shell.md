@@ -40,7 +40,7 @@ Nota: Reverse Shell común en php (pentest monkey):
 
 
 Etiqueta:
-[Preparacion-Ejpt](Preparacion-Ejpt.md)
+[Preparacion-Ejpt](Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt.md)
 
 
 

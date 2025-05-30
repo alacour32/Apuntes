@@ -15,6 +15,6 @@ tasklist /V | findstr mspaint.exe
 - Presione Entrar para generar un símbolo del sistema que se ejecuta con privilegios de administrador.
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Herramientas]]
-[[Generate a Reverse Shell Executable]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Herramientas]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Generate a Reverse Shell Executable]]

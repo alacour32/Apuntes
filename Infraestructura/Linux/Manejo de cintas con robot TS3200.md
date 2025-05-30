@@ -10,7 +10,7 @@
 	./bcktape
 ```
 
-![[Pasted image 20240517194210.png]]
+![[Apuntes/Imagenes/Pasted image 20240517194210.png]]
 - Argumentos para utilizar con el comando:
 
 	- **./bcktape backup**: Realiza un backup del directorio PARAMETRO1 a la unidad PARAMETRO2. Con descripcion PARAMETROS Ej: bcktape backup  /etc   /dev/st0 M_BSE DCHSARE
@@ -29,4 +29,4 @@
  df
 ```
 
-![[Pasted image 20240517194112.png]]
+![[Apuntes/Imagenes/Pasted image 20240517194112.png]]

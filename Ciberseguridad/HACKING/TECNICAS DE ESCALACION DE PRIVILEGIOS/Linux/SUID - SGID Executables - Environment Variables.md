@@ -27,8 +27,8 @@ PATH=.:$PATH /usr/local/bin/suid-env
 ```
 
 enlace:
-[[Preparacion-Ejpt]]
-[[SUID - SGID Executables  Known - Exploits]]
-[[SUID - SGID Executables - Shared Object Injection]]
-[[SUID - SGID Executables - Abusing Shell Features (1)]]
-[[SUID - SGID Executables - Abusing Shell Features (2)]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables  Known - Exploits]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables - Shared Object Injection]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables - Abusing Shell Features (1)]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables - Abusing Shell Features (2)]]

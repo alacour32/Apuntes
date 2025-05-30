@@ -1,9 +1,9 @@
 - **Metodologia de penetratios testing
 
-![[Pasted image 20240802205805.png]]
+![[Apuntes/Imagenes/Pasted image 20240802205805.png]]
 - **Tipos de escaneo
 
-![[Pasted image 20240802210017.png]]
+![[Apuntes/Imagenes/Pasted image 20240802210017.png]]
 
 # #Explotación: 
 
@@ -27,24 +27,24 @@ ip route add 10.10.10.0/24 via 10.10.11.1 dev tap0
 
  
 enlace: 
-[Reverse-shell](Reverse-Shell.md)
-[[Service Exploits]]
-[[Permisos de archivos débiles-Legible]]
-[[Permisos de archivos débiles- Escribible]]
-[[Sudo - Environment Variables (variable de entorno)]]
-[[Sudo - Shell Escape Sequences]]
-[[Cron Jobs - File Permissions]] 
-[[SUID - SGID Executables  Known - Exploits]]
-[[SUID - SGID Executables - Abusing Shell Features (1)]]
-[[SUID - SGID Executables - Abusing Shell Features (2)]]
-[[SUID - SGID Executables - Shared Object Injection]]
-[[SUID - SGID Executables - Environment Variables]]
-[[Passwords & Keys - History Files]]
-[[Passwords & Keys - Config Files]]
-[[Passwords & Keys - SSH Keys]] 
-[[NFS]]
-[[Generate a Reverse Shell Executable]]
-[[SQLMAP]]
-[[John The Riper]]
-[[HYDRA 1]]
-[[Hash identifier]]
+[Reverse-shell](Local/Ciberseguridad/HACKING/HERRAMIENTAS/Reverse-Shell.md)
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Service Exploits]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Permisos de archivos débiles-Legible]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Permisos de archivos débiles- Escribible]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Sudo - Environment Variables (variable de entorno)]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Sudo - Shell Escape Sequences]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Cron Jobs - File Permissions]] 
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables  Known - Exploits]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables - Abusing Shell Features (1)]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables - Abusing Shell Features (2)]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables - Shared Object Injection]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables - Environment Variables]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Passwords & Keys - History Files]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Passwords & Keys - Config Files]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Passwords & Keys - SSH Keys]] 
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/NFS]]
+[[Local/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Windows/Generate a Reverse Shell Executable]]
+[[Local/Ciberseguridad/HACKING/HERRAMIENTAS/SQLMAP]]
+[[Local/Ciberseguridad/HACKING/HERRAMIENTAS/John The Riper]]
+[[Local/Ciberseguridad/HACKING/HERRAMIENTAS/HYDRA 1]]
+[[Local/Ciberseguridad/Devsecops/HERRAMIENTAS/Hash identifier]]

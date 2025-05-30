@@ -6,7 +6,7 @@ sudo -l
 ```
 
 
-![[Pasted image 20240322230125.png]]
+![[Apuntes/Imagenes/Pasted image 20240322230125.png]]
 
 - LD_PRELOAD y LD_LIBRARY_PATH se heredan del entorno del usuario. LD_PRELOAD carga un objeto compartido antes que cualquier otro cuando se ejecuta un programa. LD_LIBRARY_PATH proporciona una lista de directorios donde se buscan primero las bibliotecas compartidas.
  
@@ -42,9 +42,9 @@ gcc -o /tmp/libcrypt.so.1 -shared -fPIC /home/user/tools/sudo/library_path.c
 sudo LD_LIBRARY_PATH=/tmp apache2
 ```
 
-![[Pasted image 20240323000043.png]]
+![[Apuntes/Imagenes/Pasted image 20240323000043.png]]
 
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Sudo - Shell Escape Sequences]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Sudo - Shell Escape Sequences]]

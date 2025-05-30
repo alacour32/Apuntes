@@ -4,7 +4,7 @@
 df -l
 ```
 
-![[Pasted image 20240327193615.png]]
+![[Apuntes/Imagenes/Pasted image 20240327193615.png]]
 
 
 - Visualizar la información de los discos, particiones y puntos de montaje con el comando:
@@ -21,7 +21,7 @@ Ejemplo: Sdb /HOT
  Desmontar Discos con particiones estándar.
 
  - Hacer crecer discos desde V-Center.
- ![[Pasted image 20240327194217.png]]
+ ![[Apuntes/Imagenes/Pasted image 20240327194217.png]]
 
  
  - Listar discos y particiones
@@ -35,7 +35,7 @@ Ejemplo: Sdb /HOT
 ```
 X=disco – N=Particion. (Verificar con fdisk -l)
 
-![[Pasted image 20240327194309.png]]
+![[Apuntes/Imagenes/Pasted image 20240327194309.png]]
 
 - Redimencionar discos con el comando:
 ```
@@ -43,7 +43,7 @@ resize2fs / dev/”dispositivo (sdXN)”
 ```
 X=disco – N=Particion. (Verificar con fdisk -l) – _ mount /dev/sdXN /”Punto de Montaje”- Montar Directorio dentro de la unidad redimencionada.
 
-![[Pasted image 20240327194342.png]]
+![[Apuntes/Imagenes/Pasted image 20240327194342.png]]
 
 
 - Montar disco/particion redimensionada.

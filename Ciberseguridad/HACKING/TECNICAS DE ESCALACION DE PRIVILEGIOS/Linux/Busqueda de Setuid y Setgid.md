@@ -5,7 +5,7 @@ Comando:
  find / -perm +6000 2>/dev/null | grep '/bin/'
 ```
 
-![[Pasted image 20240407020908.png]]
+![[Apuntes/Imagenes/Pasted image 20240407020908.png]]
 
 Este comando busca archivos con permisos establecidos en el sistema de archivos que tienen el bit setuid o setgid activado y que están ubicados en el directorio `/bin/` o sus subdirectorios.
 

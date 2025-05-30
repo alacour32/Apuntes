@@ -28,5 +28,5 @@ chmod 600 root_key
 
 
 enlace:
-[[Preparacion-Ejpt]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
 

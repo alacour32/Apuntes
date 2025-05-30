@@ -33,6 +33,6 @@ exit
 ```
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Cron Jobs - File Permissions]]
-[[Cron Jobs - Wildcards]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Cron Jobs - File Permissions]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Cron Jobs - Wildcards]]

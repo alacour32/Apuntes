@@ -42,6 +42,6 @@ rm /home/user/--checkpoint-action=exec=shell.elf
 ```
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Cron Jobs - PATH Environment Variable]]
-[[Cron Jobs - File Permissions]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Cron Jobs - PATH Environment Variable]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Cron Jobs - File Permissions]]

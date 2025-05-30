@@ -34,8 +34,8 @@ gcc -shared -fPIC -o /home/user/.config/libcalc.so /home/user/tools/suid/libcal
 
 
 enlace:
-[[Preparacion-Ejpt]]
-[[SUID - SGID Executables  Known - Exploits]]
-[[SUID - SGID Executables - Environment Variables]]
-[[SUID - SGID Executables - Abusing Shell Features (1)]]
-[[SUID - SGID Executables - Abusing Shell Features (2)]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables  Known - Exploits]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables - Environment Variables]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables - Abusing Shell Features (1)]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/SUID - SGID Executables - Abusing Shell Features (2)]]

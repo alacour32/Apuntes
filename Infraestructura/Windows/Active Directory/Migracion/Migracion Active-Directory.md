@@ -19,11 +19,11 @@
 # 1. Chequeo de los Servidores
 
 - Intentar agregar  al nuevo servidor (2019) como controlador de dominio, al hacerlo se visualizara el error que se puede observar en la captura
-![[Pasted image 20240321185426.png]]
+![[Apuntes/Imagenes/Pasted image 20240321185426.png]]
 
 - Ir a ***tools administrative*** y dentro elegir la opcion ***Active directory users and* computers**, Dentro seleccionar la opcion ***domain controler*** y se podra visualizar el controlador vigente en el dominio (equipo con windows server 2008)
 
-![[Pasted image 20240321195130.png]]
+![[Apuntes/Imagenes/Pasted image 20240321195130.png]]
 
 - Dentro de el equipo con windows server 2008 ejecuta cmd con privilegios de administrador y dentro ejecutar el comando:
 
@@ -35,14 +35,14 @@ Se podra visualizar el dueño de los roles de los distintos esquemas de configur
 
 - En el equipo con windows server 2008 ir a ***Tools administrative*** y dentro a la herramienta active ***Directory domains and trusts***, en la mismo hacer click derecho sobre el nombre del equipo y elegir la opcion ***Raise forest functional level***
 
-![[Pasted image 20240321201716.png]]
+![[Apuntes/Imagenes/Pasted image 20240321201716.png]]
 
 - En ambos servidores accedes al regedit y ubicarse en la clave de registro schema version en la direccion:
 
 ```
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\Schema Version
 ```
-![[Pasted image 20240321202150.png]]
+![[Apuntes/Imagenes/Pasted image 20240321202150.png]]
 
 NOTA: El valor de `Schema Version` es importante para determinar la compatibilidad del esquema de Active Directory entre diferentes controladores de dominio y para asegurarse de que todos los controladores de dominio estén actualizados con la versión correcta del esquema.
 
@@ -56,7 +56,7 @@ NOTA: El valor de `Schema Version` es importante para determinar la compatibilid
  .\adprep.exe /forestprep
 ```
 
-![[Pasted image 20240321211048.png]]
+![[Apuntes/Imagenes/Pasted image 20240321211048.png]]
 
 Nota: Cuando ejecutas `adprep.exe /forestprep`, se realizan las siguientes acciones:
 
@@ -69,7 +69,7 @@ Nota: Cuando ejecutas `adprep.exe /forestprep`, se realizan las siguientes accio
 .\adprep.exe /domainprep
 ```
 
-![[Pasted image 20240321211105.png]]
+![[Apuntes/Imagenes/Pasted image 20240321211105.png]]
 
 Nota: Cuando ejecutas `adprep.exe /domainprep`, se realizan las siguientes acciones:
 
@@ -83,7 +83,7 @@ ejecutar el comando:
 .\adprep.exe /domainprep /gpprep
 ```
 
-![[Pasted image 20240321211509.png]]
+![[Apuntes/Imagenes/Pasted image 20240321211509.png]]
 Nota: Cuando ejecutas `adprep.exe /domainprep /gpprep`, se realizan las siguientes acciones adicionales:
 
 1. **Preparación del dominio para Políticas de Grupo de preferencia:** Se realizan cambios en el esquema de Active Directory y se actualizan los objetos de Política de Grupo para admitir las preferencias de Política de Grupo.
@@ -96,7 +96,7 @@ En el equipo windows server 2008 ejecutar cmd.exe y ejecutar el comando :
 dcdiag /e /test:sysvolcheck /test:advertising
 ```
 
-![[Pasted image 20240321212155.png]]
+![[Apuntes/Imagenes/Pasted image 20240321212155.png]]
 Nota: El comando `dcdiag /e /test:sysvolcheck /test:advertising` es una herramienta de diagnóstico de Active Directory que se utiliza para verificar la salud y el estado de los controladores de dominio en un entorno de Active Directory. Este comando específico realiza dos pruebas:
 
 1. **Prueba de SysVolCheck (`/test:sysvolcheck`):** Esta prueba verifica la replicación del contenido de SYSVOL entre los controladores de dominio en el dominio. SYSVOL es una carpeta compartida que contiene datos y archivos de inicio de sesión de usuarios, scripts de inicio de sesión de usuario y políticas de grupo (GPO) en un entorno de Active Directory. La prueba de SysVolCheck verifica que todos los controladores de dominio tengan una réplica actualizada y coherente de la carpeta SYSVOL.
@@ -107,7 +107,7 @@ Nota: El comando `dcdiag /e /test:sysvolcheck /test:advertising` es una herramie
 ```
 Dfsrmig /setglobalstate 1
 ```
-![[Pasted image 20240321212236.png]]
+![[Apuntes/Imagenes/Pasted image 20240321212236.png]]
 
 - luego consultar con el comando:
 
@@ -115,14 +115,14 @@ Dfsrmig /setglobalstate 1
 Dgsrmig /getmigrationstate
 ```
 
-![[Pasted image 20240321212516.png]]
+![[Apuntes/Imagenes/Pasted image 20240321212516.png]]
 
 - luego ejecutar:
 ```
 Dfsrmirg /setglobalstate 2
 ```
 
-![[Pasted image 20240321212703.png]]
+![[Apuntes/Imagenes/Pasted image 20240321212703.png]]
 
 - Consultar nuevamente con el comando:
 
@@ -130,7 +130,7 @@ Dfsrmirg /setglobalstate 2
 Dgsrmig /getmigrationstate
 ```
 
-![[Pasted image 20240321212957.png]]
+![[Apuntes/Imagenes/Pasted image 20240321212957.png]]
 
 - Y por ultimo ejecutar
 
@@ -138,7 +138,7 @@ Dgsrmig /getmigrationstate
 Dfsrmirg /setglobalstate 3
 ```
 
-![[Pasted image 20240321213103.png]]
+![[Apuntes/Imagenes/Pasted image 20240321213103.png]]
 
 - Consultar por ultima vez con el comando:
 
@@ -146,34 +146,34 @@ Dfsrmirg /setglobalstate 3
 Dfsrmig /getmigrationstate
 ```
 
-![[Pasted image 20240321213204.png]]
+![[Apuntes/Imagenes/Pasted image 20240321213204.png]]
 
 # 3.  Desplegar a windows server como como controlador de dominio
 
 - Nuevamente en el equipo con windows server 2019, volver a intentar desplegar el equipo como controlador de dominio, en este caso no deberia presentar error y seguir los pasos que se observan en las capturas
 
-![[Pasted image 20240321213750.png]]
+![[Apuntes/Imagenes/Pasted image 20240321213750.png]]
 
-![[Pasted image 20240321213823.png]]Password DSRM: S0porte321
+![[Apuntes/Imagenes/Pasted image 20240321213823.png]]Password DSRM: S0porte321
 
 - Ubicarse en la opcion active directory users and computes y en la carpeta domain controllores se tendria que poder visualizar los contoladores de dominio (2008 y 2019)
 
-![[Pasted image 20240321214027.png]]
+![[Apuntes/Imagenes/Pasted image 20240321214027.png]]
 
 - Ahora en la herramienta active ***directory domains and trusts*** hacer click derecho en el equipo y elegir la opcion ***raise domain funcional level***, se podra observar el mensaje de advertencia detallando que existe en el dominio una version avanzada de active directory
-![[Pasted image 20240321214311.png]]
+![[Apuntes/Imagenes/Pasted image 20240321214311.png]]
 
 
 # 4-Chequear la replicacion entre ambos controladores
 
 - entrar en tools administratives y en la misma elegir la herramienta Active Directory Sites and Services 
-![[Pasted image 20240327212256.png]]
+![[Apuntes/Imagenes/Pasted image 20240327212256.png]]
 
 - En la misma despletar la el arbol de directorios de default-first-site-name, y al mismo tiempo desplegar ambos controladores de dominio y chequear en ambos su replicacion, haciendo click derecho en cada uno y seleccionando la opcion all tasks y luego check replicacion topology
 
-![[Pasted image 20240327212522.png]]
+![[Apuntes/Imagenes/Pasted image 20240327212522.png]]
 
-![[Pasted image 20240327212530.png]]
+![[Apuntes/Imagenes/Pasted image 20240327212530.png]]
 
 - Un ejemplo practico para probar tb si replican entre servers es crear un usuario en el dc2008 y observar si se replico el mismo usuario en el dc 2019
 
@@ -193,7 +193,7 @@ Para consultar nuevamente en donde estan ubicados los diversos roles antes de po
 Move-ADDirectoryServerOperationMasterRole -Identity DCTEST2 -OperationMasterRole SchemaMaster, DomainNamingMaster, PDCEmulator, RIDMaster, InfrastructureMaster
 ```
 
-![[Pasted image 20240321214742.png]]
+![[Apuntes/Imagenes/Pasted image 20240321214742.png]]
 
 ### 2. Moviendo rol por rol
 
@@ -238,14 +238,14 @@ netdom query fsmo
 
 - Ubicarse en  el equipo con Windows server 2008 e ir a la herramienta active directory sites and services en la misma desglosar las carpetas ***default-first-site-name/servers/"nombre del viejo controlador"***, hacer click derecho y entrar en propiedades en la pestaña general destildar la opción que dice ***"Global Catalog"***
 
-![[Pasted image 20240321223806.png]]
+![[Apuntes/Imagenes/Pasted image 20240321223806.png]]
 
 - De nuevo en en el equipo con Windows server 2019 ir a la herramienta ***active directory users and computers*** y en la carpeta domain controllers se podra visualizar ambos equipos y en la columna  DC Type se puede visualizar que el viejo controlador de dominio que figura como "DC" y el nuevo como "GC"
-![[Pasted image 20240321223904.png]]
+![[Apuntes/Imagenes/Pasted image 20240321223904.png]]
 
 luego en la ventana de ejecutar poner "DCPROMO" y ahi se empezara a ejecutar la desinstalacion de el rol de active directory 
 
-![[Pasted image 20240321224033.png]]
+![[Apuntes/Imagenes/Pasted image 20240321224033.png]]
 Nota: demora demasiado la desinstalacion
 
 # 6. Elevacion de el nivel del dominio
@@ -254,19 +254,19 @@ Nota: demora demasiado la desinstalacion
 
  - En la misma opción ya se puede visualizar un drop box para poder seleccionar el nuevo nivel de dominio 
  
-![[Pasted image 20240321224438.png]]
+![[Apuntes/Imagenes/Pasted image 20240321224438.png]]
 
 
 - Luego en la herramienta ***Active domains and trusts*** seleccionar la misma opcion y seleccionar al nivel de bosque que quiere ir
 
-![[Pasted image 20240321224544.png]]
+![[Apuntes/Imagenes/Pasted image 20240321224544.png]]
 
 - Luego de elegir el nivel no hay vuelta atras
 
-![[Pasted image 20240321224950.png]]
+![[Apuntes/Imagenes/Pasted image 20240321224950.png]]
 
 - Y en las propiedades del equipo en la herramienta active directory users and computer se pueden visualizar ambos niveles
-![[Pasted image 20240321225129.png]]
+![[Apuntes/Imagenes/Pasted image 20240321225129.png]]
 
 
 - herramienta para problemas :
@@ -279,7 +279,7 @@ ncutils
 		```
 	* 
 Enlace:
-[[Fundamentos]]
+[[Local/Infraestructura/Windows/Active Directory/Fundamentos]]
 
 Fuentes:
 https://www.youtube.com/watch?v=vuzrihbet1E

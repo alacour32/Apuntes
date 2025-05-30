@@ -15,4 +15,4 @@ su root
 ```
 
 enlace:
-[[Preparacion-Ejpt]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]

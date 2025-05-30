@@ -26,5 +26,5 @@ su root
 ```
 
 enlace:
-[[Preparacion-Ejpt]]
-[[Permisos de archivos débiles- Escribible]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Permisos de archivos débiles- Escribible]]

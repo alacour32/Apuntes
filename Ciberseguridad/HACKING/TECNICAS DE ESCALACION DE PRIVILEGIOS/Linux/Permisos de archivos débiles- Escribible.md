@@ -42,5 +42,5 @@ su root
 ```
 
 Eenlace:
-[[Preparacion-Ejpt]]
-[[Permisos de archivos débiles-Legible]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Permisos de archivos débiles-Legible]]

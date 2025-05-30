@@ -60,10 +60,10 @@ Aquí hemos usado dos banderas: -u para indicar la URL vulnerable y --dbs pa
 
 - Primero, necesitamos identificar la solicitud POST vulnerable y guardarla. Para guardar la solicitud, Haga clic derecho en la solicitud, seleccione 'Copiar a archivo' y guárdela en un directorio. También puede copiar toda la solicitud y guardarla en un archivo de texto también.
 
-![[Pasted image 20240325191912.png]]
+![[Apuntes/Imagenes/Pasted image 20240325191912.png]]
 Notará en la solicitud anterior, tenemos un parámetro POST 'sangre_grupo' que podría ser un parámetro vulnerable.
 
-![[Pasted image 20240325191950.png]]
+![[Apuntes/Imagenes/Pasted image 20240325191950.png]]
 
 - Ahora que weizve identificó un parámetro potencialmente vulnerable, vamos a saltar al sqlmap y usar el siguiente comando:
 
@@ -75,7 +75,7 @@ sqlmap -r <request_file> -p <vulnerable_parameter> --dbs
 
 Aquí hemos usado dos banderas: -r para leer el archivo, -p para suministrar el parámetro vulnerable, y --dbs para enumerar la base de datos.
 
-![[Pasted image 20240325192554.png]]
+![[Apuntes/Imagenes/Pasted image 20240325192554.png]]
 Ahora que tenemos las bases de datos, extraigamos tablas de la base de datos **sangre**.
 
 ### **Usando el Método basado en GET**
@@ -97,7 +97,7 @@ sqlmap -r req.txt -p <vulnerable_parameter> -D <database_name> --tables
 
 Una vez que ejecutamos estos comandos, debemos obtener las tablas.
 
-![[Pasted image 20240325193159.png]]Una vez que tengamos tablas disponibles, ahora vamos a reunir las columnas de la tabla sangre_db.
+![[Apuntes/Imagenes/Pasted image 20240325193159.png]]Una vez que tengamos tablas disponibles, ahora vamos a reunir las columnas de la tabla sangre_db.
 
 ### **Usando el Método basado en GET**
 
@@ -115,7 +115,7 @@ sqlmap -r req.txt -D blood -T blood_db --columns
 sqlmap -r req.txt -D <database_name> -T <table_name> --columns
 ```
 
-![[Pasted image 20240325193330.png]]
+![[Apuntes/Imagenes/Pasted image 20240325193330.png]]
 O simplemente podemos volcar todas las bases de datos y tablas disponibles utilizando los siguientes comandos.
 
 ### **Usando el Método basado en GET**
@@ -136,4 +136,4 @@ sqlmap -r req.txt-p  -D <database_name> --dump-all
 
 
 enlace
-[[Preparacion-Ejpt]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]

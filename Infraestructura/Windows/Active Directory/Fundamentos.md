@@ -1,6 +1,6 @@
 - En pocas palabras, a **Dominio windows** es un grupo de usuarios y computadoras bajo la administración de un negocio determinado. La idea principal detrás de un dominio es centralizar la administración de componentes comunes de una red informática de Windows en un único repositorio llamado **Directorio Activo (AD)**. El servidor que ejecuta los servicios de Active Directory se conoce como **Controlador de Dominio (DC)**.
 
-![[Pasted image 20240327195302.png]]
+![[Apuntes/Imagenes/Pasted image 20240327195302.png]]
 
 - Las principales ventajas de tener un dominio de Windows configurado son:
 
@@ -54,17 +54,17 @@ Puede obtener la lista completa de grupos de seguridad predeterminados de la [D
 
 - Para configurar usuarios, grupos o máquinas en Active Directory, debemos iniciar sesión en el Controlador de dominio y ejecutar "Usuarios y equipos de Active Directory" en el menú de inicio:
 
-![[Pasted image 20240327202123.png]]
+![[Apuntes/Imagenes/Pasted image 20240327202123.png]]
 
 - Esto abrirá una ventana donde se puede ver la jerarquía de usuarios, ordenadores y grupos que existen en el dominio. Estos objetos están organizados en **Unidades Organizacionales (OU)** cuáles son objetos de contenedor que le permiten clasificar usuarios y máquinas. Las OU se utilizan principalmente para definir conjuntos de usuarios con requisitos policiales similares. Es probable que las personas en el departamento de ventas de su organización tengan un conjunto diferente de políticas aplicadas que las personas en TI, por ejemplo. Tenga en cuenta que un usuario solo puede ser parte de un solo OU a la vez.
 
 - Comprobando nuestra máquina, podemos ver que ya hay un OU llamado `THM` con cuatro OU infantiles para los departamentos de TI, Gestión, Marketing y Ventas. Es muy típico ver que las OU imitan la estructura del negocio, ya que permite implementar de manera eficiente políticas de referencia que se aplican a departamentos completos. Recuerde que si bien este sería el modelo esperado la mayor parte del tiempo, puede definir OU arbitrariamente. Siéntase libre de hacer clic derecho en el `THM` OU y crear un nuevo OU debajo de él llamó `Students` solo por diversión.
 
-![[Pasted image 20240327202214.png]]
+![[Apuntes/Imagenes/Pasted image 20240327202214.png]]
 
 - Si abre cualquier OU, puede ver los usuarios que contienen y realizar tareas simples como crearlos, eliminarlos o modificarlos según sea necesario. También puede restablecer las contraseñas si es necesario (bastante útil para el servicio de asistencia):
 
-![[Pasted image 20240327202232.png]]
+![[Apuntes/Imagenes/Pasted image 20240327202232.png]]
 
 - Probablemente ya haya notado que hay otros contenedores predeterminados aparte del THM OU. Estos contenedores son creados por Windows automáticamente y contienen lo siguiente:
 
@@ -86,21 +86,21 @@ Puede obtener la lista completa de grupos de seguridad predeterminados de la [D
 
 Su primera tarea como nuevo administrador de dominio es verificar lo existente ANUNCIO OU y usuarios, ya que algunos cambios recientes le han sucedido al negocio. Se le ha dado el siguiente organigrama y se espera que realice cambios en el ANUNCIO para que coincida:
 
-![[Pasted image 20240403193228.png]]
+![[Apuntes/Imagenes/Pasted image 20240403193228.png]]
 
 ### **Eliminar OU y usuarios adicionales**
 
 Lo primero que debe notar es que hay una OU de departamento adicional en su configuración de AD actual que no aparece en el gráfico. Nos han dicho que se cerró debido a recortes presupuestarios y que debería eliminarse del dominio. Si intenta hacer clic con el botón derecho y eliminar el OU, obtendrá el siguiente error:
 
-![[Pasted image 20240403194013.png]]
+![[Apuntes/Imagenes/Pasted image 20240403194013.png]]
 
 Por defecto, las OU están protegidas contra la eliminación accidental. Para eliminar el OU, necesitamos habilitar el **Características Avanzadas** en el menú Ver:
 
-![[Pasted image 20240403194037.png]]
+![[Apuntes/Imagenes/Pasted image 20240403194037.png]]
 
 Esto le mostrará algunos contenedores adicionales y le permitirá desactivar la protección de eliminación accidental. Para hacerlo, haga clic con el botón derecho en el OU y ve a Propiedades. Encontrará una casilla de verificación en la pestaña Objeto para deshabilitar la protección:
 
-![[Pasted image 20240403194051.png]]
+![[Apuntes/Imagenes/Pasted image 20240403194051.png]]
 
 Asegúrese de desmarcar la casilla e intente eliminar el OU de nuevo. Se le pedirá que confirme que desea eliminar el OU, y como resultado, cualquier usuario, grupo u OU bajo él también será eliminado.
 
@@ -115,17 +115,17 @@ Uno de los casos de uso más comunes para esto es la concesión `IT support` l
 Para este ejemplo, delegaremos el control sobre las ventas OU a Phillip. Para delegar el control sobre un OU, puede hacer clic derecho y seleccionar **Control de Delegados**:
 
 
-![[Pasted image 20240403200700.png]]
+![[Apuntes/Imagenes/Pasted image 20240403200700.png]]
 
 Esto debería abrir una nueva ventana donde primero se le pedirá a los usuarios a los que desea delegar el control:
 
 **Nota:** Para evitar escribir mal el nombre del usuario, escriba "phillip" y haga clic en el **Verificar nombres** botón. Windows autocompletará al usuario por usted.
 
-![[Pasted image 20240403200715.png]]
+![[Apuntes/Imagenes/Pasted image 20240403200715.png]]
 
 Haga clic en Aceptar y, en el siguiente paso, seleccione la siguiente opción:
 
-![[Pasted image 20240403200727.png]]
+![[Apuntes/Imagenes/Pasted image 20240403200727.png]]
 
 Haga clic a continuación un par de veces, y ahora Phillip debería poder restablecer las contraseñas para cualquier usuario en el departamento de ventas. Si bien es probable que desee repetir estos pasos para delegar los restablecimientos de contraseñas de los departamentos de Marketing y Gestión, lo dejaremos aquí para esta tarea. Usted es libre de continuar configurando el resto de las OU si así lo desea.
 
@@ -135,7 +135,7 @@ Haga clic a continuación un par de veces, y ahora Phillip debería poder restab
 
 De forma predeterminada, todas las máquinas que se unen a un dominio (excepto las DC) se colocarán en el contenedor llamado "Computadoras". Si comprobamos nuestro DC, veremos que algunos dispositivos ya están allí:
 
-![[Pasted image 20240403211355.png]]
+![[Apuntes/Imagenes/Pasted image 20240403211355.png]]
 
 Podemos ver algunos servidores, algunos portátiles y algunos PC correspondientes a los usuarios de nuestra red. Tener todos nuestros dispositivos no es la mejor idea, ya que es muy probable que desee diferentes políticas para sus servidores y las máquinas que los usuarios habituales utilizan a diario.
 
@@ -155,7 +155,7 @@ Los controladores de dominio son el tercer dispositivo más común dentro de un 
 
 Como estamos ordenando nuestro AD, creemos dos OU separadas para `Workstations` y `Servers` (Los controladores de dominio ya están en un OU creado por Windows). Los crearemos directamente bajo el `thm.local` contenedor de dominio. Al final, debe tener lo siguiente OU estructura:
 
-![[Pasted image 20240403211456.png]]
+![[Apuntes/Imagenes/Pasted image 20240403211456.png]]
 
 
 Ahora, mueva las computadoras personales y las computadoras portátiles a las estaciones de trabajo OU y los servidores a los servidores OU desde el contenedor de Computadoras. Hacerlo nos permitirá configurar políticas para cada uno OU más tarde.
@@ -169,40 +169,40 @@ Windows gestiona dichas políticas a través de **Objetos de Política de Grupo
 
 Para configurar los GPO, puede usar el **Gestión de Políticas de Grupo** herramienta, disponible en el menú de inicio:
 
-![[Pasted image 20240403211535.png]]
+![[Apuntes/Imagenes/Pasted image 20240403211535.png]]
 
 Lo primero que verá al abrirlo es su completo OU jerarquía, como se definió antes. Para configurar las Políticas de grupo, primero cree un GPO bajo **Objetos de Política de Grupo** y luego vincularlo a la OU donde desea que se apliquen las políticas. Como ejemplo, puede ver que hay algunos GPO ya existentes en su máquina:
 
-![[Pasted image 20240403211545.png]]
+![[Apuntes/Imagenes/Pasted image 20240403211545.png]]
 
 Podemos ver en la imagen de arriba que se han creado 3 GPO. De esos, el `Default Domain Policy` y `RDP Policy` están vinculados a la `thm.local` dominio en su conjunto, y el `Default Domain Controllers Policy` está vinculado al `Domain Controllers` OU sólo. Algo importante a tener en cuenta es que cualquier GPO se aplicará a los vinculados OU y cualquier sub-OU bajo él. Por ejemplo, el `Sales` OU seguirá siendo afectado por el `Default Domain Policy`.
 
 Examinemos el `Default Domain Policy` para ver lo que hay dentro de un GPO. La primera pestaña que verá al seleccionar un GPO muestra su **alcance**, que es donde el GPO está vinculado en el ANUNCIO. Para la política actual, podemos ver que solo se ha vinculado a la `thm.local` dominio:
 
-![[Pasted image 20240403211555.png]]
+![[Apuntes/Imagenes/Pasted image 20240403211555.png]]
 
 Como puede ver, también puede aplicar **Filtrado de Seguridad** a los GPO para que solo se apliquen a usuarios/computadoras específicos bajo un OU. Por defecto, se aplicarán a la **Usuarios Autenticados** grupo, que incluye todos los usuarios/PC.
 
 El **Configuración** la pestaña incluye el contenido real de la GPO y nos permite saber qué configuraciones específicas aplica. Como se indicó antes, cada uno GPO tiene configuraciones que se aplican solo a computadoras y configuraciones que se aplican solo a usuarios. En este caso, el `Default Domain Policy` solo contiene Configuraciones de Ordenador:
 
-![[Pasted image 20240403211607.png]]
+![[Apuntes/Imagenes/Pasted image 20240403211607.png]]
 
 Siéntase libre de explorar el GPO y ampliar los elementos disponibles utilizando los enlaces "mostrar" en el lado derecho de cada configuración. En este caso, el `Default Domain Policy` indica configuraciones realmente básicas que deberían aplicarse a la mayoría de los dominios, incluidas las políticas de bloqueo de contraseñas y cuentas:
 
-![[Pasted image 20240403211627.png]]
+![[Apuntes/Imagenes/Pasted image 20240403211627.png]]
 
 Dado que este GPO se aplica a todo el dominio, cualquier cambio en él afectaría a todas las computadoras. Cambiemos la política de longitud de contraseña mínima para exigir a los usuarios que tengan al menos 10 caracteres en sus contraseñas. Para hacer esto, haga clic derecho en el GPO y seleccionar **Editar**:
 
-![[Pasted image 20240403211636.png]]
+![[Apuntes/Imagenes/Pasted image 20240403211636.png]]
 
 Esto abrirá una nueva ventana donde podremos navegar y editar todas las configuraciones disponibles. Para cambiar la longitud mínima de la contraseña, vaya a `Computer Configurations -> Policies -> Windows Setting -> Security Settings -> Account Policies -> Password Policy` y cambiar el valor de la política requerida:
 
 
-![[Pasted image 20240403211647.png]]
+![[Apuntes/Imagenes/Pasted image 20240403211647.png]]
 
 Como puede ver, se pueden establecer muchas políticas en un GPO. Si bien explicar cada uno de ellos sería imposible en una sola habitación, siéntase libre de explorar un poco, ya que algunas de las políticas son sencillas. Si se necesita más información sobre cualquiera de las políticas, puede hacer doble clic en ellas y leer el **Explicar** pestaña en cada uno de ellos:
 
-![[Pasted image 20240403211659.png]]
+![[Apuntes/Imagenes/Pasted image 20240403211659.png]]
 
 ### **GPO distribución** 
 
@@ -236,23 +236,23 @@ Cuando Kerberos se utiliza para la autenticación, ocurre el siguiente proceso
     
     Observar el TGT está encriptado usando el **krbtgt** hash de contraseña de la cuenta y, por lo tanto, el usuario no puede acceder a su contenido. Es esencial saber que el cifrado TGT incluye una copia de la clave de sesión como parte de su contenido, y el KDC no necesita almacenar la clave de sesión, ya que puede recuperar una copia descifrando el TGT si es necesario.
 
-![[Pasted image 20240403212158.png]]
+![[Apuntes/Imagenes/Pasted image 20240403212158.png]]
 
 2. Cuando un usuario desea conectarse a un servicio en la red como un recurso compartido, sitio web o base de datos, utilizará su TGT para pedir al KDC un **Servicio de Concesión de Entradas (TGS)**. TGS son tickets que permiten la conexión solo al servicio específico para el que fueron creados. Para solicitar un TGS, el usuario enviará su nombre de usuario y una marca de tiempo cifrada utilizando la Clave de sesión, junto con el TGT y a **Nombre Principal del Servicio (SPN),** lo que indica el servicio y el nombre del servidor al que pretendemos acceder.
     
     Como resultado, el KDC nos enviará un TGS junto con un **Clave de Sesión de Servicio**, que necesitaremos autenticar al servicio al que queremos acceder. El TGS se cifra utilizando una clave derivada del **Propietario de Servicio Hash**. El Propietario del Servicio es la cuenta de usuario o máquina en la que se ejecuta el servicio. El TGS contiene una copia de la Clave de Sesión de Servicio en sus contenidos cifrados para que el Propietario del Servicio pueda acceder a ella descifrando el TGS.
 
-![[Pasted image 20240403212232.png]]
+![[Apuntes/Imagenes/Pasted image 20240403212232.png]]
 
 3. El TGS se puede enviar al servicio deseado para autenticar y establecer una conexión. El servicio utilizará el hash de contraseña de su cuenta configurada para descifrar el TGS y validar la Clave de Sesión de Servicio.
-![[Pasted image 20240403212254.png]]
+![[Apuntes/Imagenes/Pasted image 20240403212254.png]]
 
 ### **Autenticación NetNTLM**
 
 NetNTLM funciona utilizando un mecanismo de desafío-respuesta. Todo el proceso es el siguiente:
 
 
-![[Pasted image 20240403212320.png]]
+![[Apuntes/Imagenes/Pasted image 20240403212320.png]]
 
 1. El cliente envía una solicitud de autenticación al servidor al que desea acceder.
 2. El servidor genera un número aleatorio y lo envía como un desafío para el cliente.
@@ -271,7 +271,7 @@ Tenga en cuenta que la contraseña (o hash) del usuario nunca se transmite a tra
 
 Hasta ahora, hemos discutido cómo administrar un solo dominio, el rol de un Controlador de Dominio y cómo se une a las computadoras, servidores y usuarios.
 
-![[Pasted image 20240403212423.png]]
+![[Apuntes/Imagenes/Pasted image 20240403212423.png]]
 
 A medida que las empresas crecen, también lo hacen sus redes. Tener un solo dominio para una empresa es lo suficientemente bueno como para comenzar, pero con el tiempo algunas necesidades adicionales podrían empujarlo a tener más de uno.
 
@@ -283,7 +283,7 @@ Afortunadamente para nosotros, Active Directory admite la integración de múlti
 
 Si nuestro `thm.local` el dominio se dividió en dos subdominios para las sucursales del Reino Unido y los Estados Unidos, podría construir un árbol con un dominio raíz de `thm.local` y dos subdominios llamados `uk.thm.local` y `us.thm.local`, cada uno con su ANUNCIO, computadoras y usuarios:
 
-![[Pasted image 20240403212458.png]]
+![[Apuntes/Imagenes/Pasted image 20240403212458.png]]
 
 Esta estructura dividida nos da un mejor control sobre quién puede acceder a qué en el dominio. La gente de TI del Reino Unido tendrá su propio DC que administra solo los recursos del Reino Unido. Por ejemplo, un usuario del Reino Unido no podría administrar usuarios de los Estados Unidos. De esa manera, los Administradores de Dominio de cada sucursal tendrán control completo sobre sus respectivos DC, pero no sobre los DC de otras sucursales. Las políticas también se pueden configurar de forma independiente para cada dominio en el árbol.
 
@@ -293,7 +293,7 @@ Es necesario introducir un nuevo grupo de seguridad cuando se habla de árboles 
 
 Los dominios que administra también se pueden configurar en diferentes espacios de nombres. Supongamos que su empresa continúa creciendo y eventualmente adquiere otra empresa llamada `MHT Inc.` Cuando ambas compañías se fusionen, probablemente tendrá diferentes árboles de dominio para cada compañía, cada uno administrado por su propio departamento de TI. La unión de varios árboles con diferentes espacios de nombres en la misma red se conoce como **bosque**.
 
-![[Pasted image 20240403212628.png]]
+![[Apuntes/Imagenes/Pasted image 20240403212628.png]]
 
 ### **Relaciones de Confianza**
 
@@ -303,7 +303,7 @@ En términos simples, tener una relación de confianza entre dominios le permite
 
 La relación de confianza más simple que se puede establecer es una **relación de confianza unidireccional**. En un fideicomiso unidireccional, si `Domain AAA` fideicomisos `Domain BBB`, ésto significa que un usuario en BBB puede ser autorizado para acceder a recursos en AAA:
 
-![[Pasted image 20240403212700.png]]
+![[Apuntes/Imagenes/Pasted image 20240403212700.png]]
 
 
 La dirección de la relación de confianza unidireccional es contraria a la dirección de acceso.

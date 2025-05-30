@@ -40,5 +40,5 @@ chmod +xs /tmp/nfs/shell.elf
 ```
 
 enlace:
-[[Preparacion-Ejpt]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
 

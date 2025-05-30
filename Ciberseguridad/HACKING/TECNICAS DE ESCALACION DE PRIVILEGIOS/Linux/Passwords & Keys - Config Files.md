@@ -19,5 +19,5 @@ su root
 ```
 
 enlace:
-[[Passwords & Keys - History Files]]
-[[Preparacion-Ejpt]]
+[[Apuntes/Ciberseguridad/HACKING/TECNICAS DE ESCALACION DE PRIVILEGIOS/Linux/Passwords & Keys - History Files]]
+[[Local/Ciberseguridad/HACKING/CERTIFICACIONES/EJPT/Preparacion-Ejpt]]
