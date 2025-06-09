@@ -32,4 +32,4 @@
 Después de reiniciar, tu sistema Ubuntu Server debería estar utilizando la versión del kernel que has instalado. Recuerda que siempre es importante realizar una copia de seguridad antes de realizar actualizaciones importantes como esta, especialmente si estás trabajando en un entorno de producción.
 
 Enlace:
-[[Apuntes/Infraestructura/Linux/Instalacion Cylance-Ubuntu]]
+[[Instalacion Cylance-Ubuntu]]
