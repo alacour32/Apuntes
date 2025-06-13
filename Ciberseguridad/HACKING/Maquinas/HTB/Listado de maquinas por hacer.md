@@ -1,6 +1,6 @@
 
 
-- [ ] **`Nibbles` (Easy)**
+- [x] **`Nibbles` (Easy)**
 - [ ] **`Bounty` (Easy)** 
 - [ ] **`Shocker` (Easy)**
 - [ ] **`SwagShop` (Easy)**  
@@ -8,7 +8,7 @@
 - [ ] **`Jack-of-All-Trades` (Medium)**
 - [ ] **`Lame` (Easy)** 
 - [ ] **`Bastion` (Medium)**
-- [x] **`Jerry` (Easy)**  
+- [ ] **`Jerry` (Easy)**  
 - [ ] **`Valentine` (Medium)**
 - [ ] **`OpenAdmin` (Easy)** 
 - [ ] **`Blue (Windows - Fácil)`**
@@ -22,3 +22,5 @@
 - [ ] **`Netmon _(Windows)_`
 - [ ] **`Tenten _(Linux)_`
 - [ ] **`SolidState _(Linux)_`
+- [x] **`Validation`**
+- [x] **`Return`**
