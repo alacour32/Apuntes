@@ -1,0 +1,24 @@
+
+
+- [ ] **`Nibbles` (Easy)**
+- [ ] **`Bounty` (Easy)** 
+- [ ] **`Shocker` (Easy)**
+- [ ] **`SwagShop` (Easy)**  
+- [ ] **`Tabby` (Medium)**
+- [ ] **`Jack-of-All-Trades` (Medium)**
+- [ ] **`Lame` (Easy)** 
+- [ ] **`Bastion` (Medium)**
+- [x] **`Jerry` (Easy)**  
+- [ ] **`Valentine` (Medium)**
+- [ ] **`OpenAdmin` (Easy)** 
+- [ ] **`Blue (Windows - Fácil)`**
+- [ ] **`Devel (Windows - Fácil)`**
+- [ ] **`Bashed (Linux - Fácil)`**
+- [ ] **`Optimum (Windows - Fácil)`**
+- [ ] **`Legacy _(Windows, fácil)_`
+- [ ] **`Sens _(Linux)_`
+- [ ] **`Beep _(Linux)_`
+- [ ] **`Valentine _(Linux)_`
+- [ ] **`Netmon _(Windows)_`
+- [ ] **`Tenten _(Linux)_`
+- [ ] **`SolidState _(Linux)_`
